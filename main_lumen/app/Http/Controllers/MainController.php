@@ -22,8 +22,8 @@ class MainController extends Controller
         if(null !== $request->input('token') && $request->input('token') == env('APP_TOKEN'))
         {
             $client = new HttpClient();
-            $res = $client->request('GET', 'http://curl.haxx.se/libcurl/c/libcurl-errors.html');
-            return $res->getStatusCode();
+            $res = $client->request('GET', env('APP_SLACKSERVICEURL'));
+            return [$res->getStatusCode()];
             //return ['OK'];
         }
         return ['false'];
