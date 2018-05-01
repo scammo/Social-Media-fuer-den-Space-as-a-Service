@@ -24,10 +24,7 @@ class MainController extends Controller
             $client = new HttpClient();
             $res = $client->request('GET', 'http://curl.haxx.se/libcurl/c/libcurl-errors.html');
             return $res->getStatusCode();
-            //return ['OK'];
         }
-        return ['false'];
+        return ['Wrong or no token. Try with a different or other token. Please do not hack us, we are the good guys'];
     }
-
-    //
 }
