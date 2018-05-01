@@ -26,8 +26,6 @@ class MainController extends Controller
             return [$res->getStatusCode()];
             //return ['OK'];
         }
-        return ['false'];
+        return ['Wrong or no token. Try with a different or other token. Please do not hack us, we are the good guys'];
     }
-
-    //
 }
